@@ -54,22 +54,24 @@ Demo-environment limitations were documented separately from functional issues.
 
 FOLDER STRUCTURE
 ### 📁 FOLDER STRUCTURE
-QA-API-Testing-Demoblaze-Project
+```text
+UI-API-Testing-Demoblaze-Project
 │
 ├── TestCase_Demoblaze.xlsx
 ├── README.md
 │
 ├── Screenshots
-│ ├── UI
-│ └── API
+│   ├── UI
+│   └── API
 │
 ├── Postman
-│ ├── Demoblaze_API_Collection.json
-│ └── Demoblaze_API_Environment.json
+│   ├── Demoblaze_API_Collection.json
+│   └── Demoblaze_API_Environment.json
 │
 └── Exports
-├── TestCase_UI.pdf
-├── BugReport_UI.pdf
-├── TestCase_API.pdf
-└── BugReport_API.pdf
+    ├── TestCase_UI.pdf
+    ├── BugReport_UI.pdf
+    ├── TestCase_API.pdf
+    └── BugReport_API.pdf
+
 

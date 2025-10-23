@@ -53,21 +53,23 @@ All materials follow professional QA standards, with clear linkage between test 
 Demo-environment limitations were documented separately from functional issues.
 
 FOLDER STRUCTURE
-Demoblaze_UI_Testing
+### 📁 FOLDER STRUCTURE
+QA-API-Testing-Demoblaze-Project
 │
 ├── TestCase_Demoblaze.xlsx
 ├── README.md
 │
 ├── Screenshots
-│   ├── UI
-│   └── API
+│ ├── UI
+│ └── API
 │
 ├── Postman
-│   ├── Demoblaze_API_Collection.json
-│   └── Demoblaze_API_Environment.json
+│ ├── Demoblaze_API_Collection.json
+│ └── Demoblaze_API_Environment.json
 │
 └── Exports
-    ├── TestCase_UI.pdf
-    ├── BugReport_UI.pdf
-    ├── TestCase_API.pdf
-    └── BugReport_API.pdf
+├── TestCase_UI.pdf
+├── BugReport_UI.pdf
+├── TestCase_API.pdf
+└── BugReport_API.pdf
+

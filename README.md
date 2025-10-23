@@ -25,9 +25,9 @@ This project documents **manual and API testing** performed on the demo e-commer
 
 ### TEST EXECUTION SUMMARY
 
-**UI** testing included **28 test cases**, of which 18 passed, 6 failed, and 4 were not executed.    
-**API** testing included **24 test cases**, of which 16 passed, 2 failed, and 6 were partially executed due to demo environment limitations.     
-**In total, 52 tests were executed** with 10 unique bugs identified (8 UI and 2 API).
+**UI testing** included **28 test cases**, of which 18 passed, 6 failed, and 4 were not executed.    
+**API testing** included **24 test cases**, of which 16 passed, 2 failed, and 6 were partially executed due to demo environment limitations.     
+**In total, 52 tests** were executed with 10 unique bugs identified (8 UI and 2 API).
 
 ### ENVIRONMENT NOTES
 

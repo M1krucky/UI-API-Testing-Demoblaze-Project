@@ -1,0 +1,1132 @@
+{
+	"info": {
+		"_postman_id": "20e896e9-18ab-4201-ab02-7192ecfa2af4",
+		"name": "Demoblaze_API_Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47669960",
+		"_collection_link": "https://m1krucky-921957.postman.co/workspace/QA_Demoblaze~4a232eb6-486f-4a3c-88ae-c185e00a6997/collection/47669960-20e896e9-18ab-4201-ab02-7192ecfa2af4?action=share&source=collection_link&creator=47669960"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign Up tests",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"TestUser88\",\r\n  \"password\": \"MTIzMzIxTm4h\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Sign Up - Valid User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"TestUser88\",\r\n  \"password\": \"MTIzMzIxTm4h\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.demoblaze.com/signup",
+									"protocol": "https",
+									"host": [
+										"api",
+										"demoblaze",
+										"com"
+									],
+									"path": [
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "2bf955822076c3bee745b7513e17ae73"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 11 Oct 2025 15:19:40 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3"
+								}
+							],
+							"cookie": [],
+							"body": "\"\""
+						},
+						{
+							"name": "Sign Up - Existing User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"TestUser88\",\r\n  \"password\": \"MTIzMzIxTm4h\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.demoblaze.com/signup",
+									"protocol": "https",
+									"host": [
+										"api",
+										"demoblaze",
+										"com"
+									],
+									"path": [
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "46f9d2a3aed5bdbdb2793f14633861ce"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 11 Oct 2025 15:21:21 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorMessage\": \"This user already exist.\"\n}"
+						},
+						{
+							"name": "Sign Up - Empty Credentials (Error 500)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"\",\r\n  \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.demoblaze.com/signup",
+									"protocol": "https",
+									"host": [
+										"api",
+										"demoblaze",
+										"com"
+									],
+									"path": [
+										"signup"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "a1586157ae69a7339472fa9b8a4b79e1;o=1"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 11 Oct 2025 15:37:58 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "265"
+								}
+							],
+							"cookie": [],
+							"body": "<!doctype html><html lang=en><title>500 Internal Server Error</title><h1>Internal Server Error</h1><p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>"
+						},
+						{
+							"name": "Sign-Up – Empty Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\": \"TestUser89\", \r\n\"password\": \"\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/signup",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "d71b8cf767d43de6002e883672ab6247;o=1"
+								},
+								{
+									"key": "date",
+									"value": "Mon, 13 Oct 2025 14:19:58 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorMessage\": \"This user already exist.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login tests",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\": \"TestUser88\", \r\n\"password\": \"MTIzMzIxTm4h\" }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login – Valid Credentials",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\": \"TestUser88\", \r\n\"password\": \"MTIzMzIxTm4h\" }\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.demoblaze.com/login",
+									"protocol": "https",
+									"host": [
+										"api",
+										"demoblaze",
+										"com"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "c67ba72872e7aca5ae37bf9a9f2c8b65"
+								},
+								{
+									"key": "date",
+									"value": "Mon, 13 Oct 2025 12:39:15 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "\"Auth_token: VGVzdFVzZXI4ODE3NjA5NTk=\""
+						},
+						{
+							"name": "Login – Wrong Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\": \"TestUser88\", \r\n\"password\": \"WrongPass\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.demoblaze.com/login",
+									"protocol": "https",
+									"host": [
+										"api",
+										"demoblaze",
+										"com"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "cb2b9996751edc232f8ca843fa6e179d"
+								},
+								{
+									"key": "date",
+									"value": "Mon, 13 Oct 2025 13:00:23 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorMessage\": \"Wrong password.\"\n}"
+						},
+						{
+							"name": "Login – Nonexistent User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\": \"NoUser\", \r\n\"password\": \"MTIzMzIxTm4h\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.demoblaze.com/login",
+									"protocol": "https",
+									"host": [
+										"api",
+										"demoblaze",
+										"com"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "90d4396136e92a42a1379d1857e2eb2a"
+								},
+								{
+									"key": "date",
+									"value": "Mon, 13 Oct 2025 13:12:25 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorMessage\": \"User does not exist.\"\n}"
+						},
+						{
+							"name": "Login – Empty Username",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\": \"\", \r\n\"password\": \"MTIzMzIxTm4h\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.demoblaze.com/login",
+									"protocol": "https",
+									"host": [
+										"api",
+										"demoblaze",
+										"com"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "fae4e0a6b96cf631e5519adb0b9bca63"
+								},
+								{
+									"key": "date",
+									"value": "Mon, 13 Oct 2025 13:17:11 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "265"
+								}
+							],
+							"cookie": [],
+							"body": "<!doctype html><html lang=en><title>500 Internal Server Error</title><h1>Internal Server Error</h1><p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>"
+						},
+						{
+							"name": "Login – Empty Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"username\": \"TestUser88\", \r\n\"password\": \"\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.demoblaze.com/login",
+									"protocol": "https",
+									"host": [
+										"api",
+										"demoblaze",
+										"com"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "7c5b93a48158d86e2b98027d90df7c7a"
+								},
+								{
+									"key": "date",
+									"value": "Mon, 13 Oct 2025 13:54:15 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorMessage\": \"Wrong password.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout – 404 Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "1c96a681abd7d546fece8d5b868d50a6;o=1"
+								},
+								{
+									"key": "date",
+									"value": "Tue, 14 Oct 2025 05:55:00 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "<!doctype html><html lang=en><title>404 Not Found</title><h1>Not Found</h1><p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>"
+						}
+					]
+				}
+			],
+			"description": "This folder contains requests related to authentication and setup for the Demoblaze API.  \nIt includes login, logout, and token management requests where applicable.  \nEven though the Demoblaze API does not require authentication for basic actions,  \nthese requests demonstrate typical QA practices for testing secured endpoints."
+		},
+		{
+			"name": "Cart & Orders",
+			"item": [
+				{
+					"name": "Cart & Orders tests",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"fa1c9918-875d-c378-3035-f5c2a772f861\",\r\n  \"cookie\": \"VGVzdFVzZXI4MDE3NjEyMDE=\",\r\n  \"prod_id\": 2,\r\n  \"flag\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/addtocart",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"addtocart"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add to cart – Valid Credentials",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"fa1c9918-875d-c378-3035-f5c2a772f861\",\r\n  \"cookie\": \"VGVzdFVzZXI4MDE3NjEyMDE=\",\r\n  \"prod_id\": 2,\r\n  \"flag\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/addtocart",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"addtocart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "eaa6b7a1f1288f59f8609d29614a1676"
+								},
+								{
+									"key": "date",
+									"value": "Fri, 17 Oct 2025 07:48:31 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Add to Cart – Invalid Product ID",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"fa1c9918-875d-c378-3035-f5c2a772f861\",\r\n  \"cookie\": \"VGVzdFVzZXI4MDE3NjEyMDE=\",\r\n  \"prod_id\": 999999,\r\n  \"flag\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/addtocart",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"addtocart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "865db81ebe79ffee3da5fc321558b264"
+								},
+								{
+									"key": "date",
+									"value": "Fri, 17 Oct 2025 08:18:00 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "View Cart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cookie\": \"VGVzdFVzZXI4MDE3NjEyMDE=\",\r\n  \"flag\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/viewcart",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"viewcart"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "3bb4dba8dc188214466e02a66dcc6615"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 18 Oct 2025 07:41:06 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Items\": []\n}"
+						},
+						{
+							"name": "Delete from Cart",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"id\": \"8fbeb8ed-ce60-d0d0-1bff-ffe856139fd3\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/deleteitem",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"deleteitem"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "f6090d429efecfca61695566d720a50f"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 18 Oct 2025 16:06:32 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorMessage\": \"Not found.\"\n}"
+						},
+						{
+							"name": "Place order – Valid Credentials",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"name\": \"Test User\", \r\n\"country\": \"Israel\", \r\n\"city\": \"Tel Aviv\", \r\n\"creditCard\": \"1234-5678-9999-0000\", \r\n\"month\": \"10\", \r\n\"year\": \"2025\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/placeorder",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"placeorder"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "e4987e04c7d38d3aee13a00c30965bbb;o=1"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 18 Oct 2025 16:15:07 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "<!doctype html><html lang=en><title>404 Not Found</title><h1>Not Found</h1><p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>"
+						},
+						{
+							"name": "Place order – Missing payment details",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \"name\": \"Test User\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/placeorder",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"placeorder"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "content-type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "ba7d2f16100a5e13c04f6378328e08bb;o=1"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 18 Oct 2025 16:41:02 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "<!doctype html><html lang=en><title>404 Not Found</title><h1>Not Found</h1><p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					"// ✅ Universal Post-response validation for all Demoblaze endpoints\r",
+					"\r",
+					"// Response status\r",
+					"pm.test(\"Status code is not server error\", function () {\r",
+					"    pm.expect(pm.response.code).to.be.below(500);\r",
+					"});\r",
+					"\r",
+					"// Response time\r",
+					"pm.test(\"Response time is under 2 seconds\", function () {\r",
+					"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+					"});\r",
+					"\r",
+					"// JSON format check (skip HTML/empty)\r",
+					"const contentType = pm.response.headers.get(\"Content-Type\") || \"\";\r",
+					"if (contentType.includes(\"application/json\")) {\r",
+					"    pm.test(\"Response is valid JSON\", function () {\r",
+					"        pm.response.to.have.jsonBody();\r",
+					"    });\r",
+					"\r",
+					"    // Check for key presence\r",
+					"    const json = pm.response.json();\r",
+					"    pm.test(\"Contains success or errorMessage\", function () {\r",
+					"        pm.expect(json).to.have.any.keys(\"success\", \"errorMessage\");\r",
+					"    });\r",
+					"} else {\r",
+					"    console.warn(\"Non-JSON response detected, skipping JSON validation.\");\r",
+					"    pm.test.skip(\"Skipped JSON validation for non-JSON response\");\r",
+					"}\r",
+					"\r",
+					"// Log environment variables\r",
+					"console.log(\"Active base_url:\", pm.variables.get(\"base_url\"));\r",
+					"\r",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": ""
+		}
+	]
+}

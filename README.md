@@ -61,21 +61,25 @@ Demo-environment limitations were documented separately from functional issues.
 ```text
 UI-API-Testing-Demoblaze-Project
 │
-├── TestCase_Demoblaze.xlsx
 ├── README.md
 │
-├── Screenshots
+├── 01_Documentation
+│   ├── TestCase_Demoblaze.xlsx
+│   ├── README_Demoblaze.pdf
+│
+├── 02_Screenshots
 │   ├── UI
 │   └── API
 │
-├── Postman
+├── 03_Postman
 │   ├── Demoblaze_API_Collection.json
 │   └── Demoblaze_API_Environment.json
 │
-└── Exports
+└── 04_Exports
     ├── TestCase_UI.pdf
     ├── BugReport_UI.pdf
     ├── TestCase_API.pdf
     └── BugReport_API.pdf
+
 
 

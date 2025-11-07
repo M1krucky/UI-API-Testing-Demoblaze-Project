@@ -1,4 +1,4 @@
-## DEMOBLAZE QA TESTING PROJECT
+## Demoblaze QA Portfolio Project
 
  ### OVERVIEW
 
@@ -59,7 +59,7 @@ Demo-environment limitations were documented separately from functional issues.
 ### FOLDER STRUCTURE
 #### 📁 FOLDER STRUCTURE
 ```text
-UI-API-Testing-Demoblaze-Project
+Demoblaze-QA-Portfolio
 │
 ├── README.md
 │
